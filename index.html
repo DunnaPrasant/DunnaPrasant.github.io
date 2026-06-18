@@ -17,18 +17,18 @@
       --muted: #6b6b8a;
       --border: rgba(0,229,255,0.12);
     }
-
+ 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'DM Mono', monospace;
       overflow-x: hidden;
     }
-
+ 
     /* Animated background grid */
     body::before {
       content: '';
@@ -41,7 +41,7 @@
       pointer-events: none;
       z-index: 0;
     }
-
+ 
     /* Glow blob */
     body::after {
       content: '';
@@ -55,12 +55,12 @@
       z-index: 0;
       animation: blobMove 8s ease-in-out infinite alternate;
     }
-
+ 
     @keyframes blobMove {
       from { transform: translate(0, 0); }
       to { transform: translate(-100px, 100px); }
     }
-
+ 
     /* NAV */
     nav {
       position: fixed;
@@ -74,7 +74,7 @@
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
-
+ 
     .nav-logo {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
@@ -82,13 +82,13 @@
       color: var(--accent);
       letter-spacing: -0.5px;
     }
-
+ 
     .nav-links {
       display: flex;
       gap: 40px;
       list-style: none;
     }
-
+ 
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
@@ -97,9 +97,9 @@
       text-transform: uppercase;
       transition: color 0.3s;
     }
-
+ 
     .nav-links a:hover { color: var(--accent); }
-
+ 
     /* HERO */
     .hero {
       min-height: 100vh;
@@ -109,9 +109,9 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     .hero-content { max-width: 800px; }
-
+ 
     .hero-tag {
       display: inline-block;
       font-size: 0.7rem;
@@ -123,7 +123,7 @@
       margin-bottom: 32px;
       animation: fadeUp 0.6s ease both;
     }
-
+ 
     .hero h1 {
       font-family: 'Syne', sans-serif;
       font-size: clamp(3rem, 8vw, 6rem);
@@ -133,13 +133,13 @@
       margin-bottom: 24px;
       animation: fadeUp 0.6s 0.1s ease both;
     }
-
+ 
     .hero h1 span {
       display: block;
       -webkit-text-stroke: 1px var(--accent);
       color: transparent;
     }
-
+ 
     .hero-desc {
       font-size: 0.95rem;
       color: var(--muted);
@@ -148,14 +148,14 @@
       margin-bottom: 48px;
       animation: fadeUp 0.6s 0.2s ease both;
     }
-
+ 
     .hero-btns {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       animation: fadeUp 0.6s 0.3s ease both;
     }
-
+ 
     .btn-primary {
       background: var(--accent);
       color: var(--bg);
@@ -168,13 +168,13 @@
       transition: all 0.3s;
       display: inline-block;
     }
-
+ 
     .btn-primary:hover {
       background: transparent;
       color: var(--accent);
       outline: 1px solid var(--accent);
     }
-
+ 
     .btn-outline {
       border: 1px solid var(--muted);
       color: var(--muted);
@@ -186,12 +186,12 @@
       transition: all 0.3s;
       display: inline-block;
     }
-
+ 
     .btn-outline:hover {
       border-color: var(--accent);
       color: var(--accent);
     }
-
+ 
     .hero-stats {
       position: absolute;
       right: 60px;
@@ -201,11 +201,11 @@
       gap: 32px;
       animation: fadeUp 0.6s 0.4s ease both;
     }
-
+ 
     .stat {
       text-align: right;
     }
-
+ 
     .stat-num {
       font-family: 'Syne', sans-serif;
       font-size: 2.5rem;
@@ -213,26 +213,26 @@
       color: var(--accent);
       line-height: 1;
     }
-
+ 
     .stat-label {
       font-size: 0.65rem;
       color: var(--muted);
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
+ 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* SECTIONS */
     section {
       padding: 100px 60px;
       position: relative;
       z-index: 1;
     }
-
+ 
     .section-label {
       font-size: 0.65rem;
       letter-spacing: 4px;
@@ -240,7 +240,7 @@
       color: var(--accent);
       margin-bottom: 16px;
     }
-
+ 
     .section-title {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -249,14 +249,14 @@
       margin-bottom: 60px;
       line-height: 1.1;
     }
-
+ 
     /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 16px;
     }
-
+ 
     .skill-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -266,7 +266,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .skill-card::before {
       content: '';
       position: absolute;
@@ -276,33 +276,33 @@
       transform: scaleX(0);
       transition: transform 0.3s;
     }
-
+ 
     .skill-card:hover::before { transform: scaleX(1); }
     .skill-card:hover {
       border-color: var(--accent);
       transform: translateY(-4px);
     }
-
+ 
     .skill-icon {
       font-size: 2rem;
       margin-bottom: 12px;
       display: block;
     }
-
+ 
     .skill-name {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
       font-size: 0.9rem;
       color: var(--text);
     }
-
+ 
     /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 24px;
     }
-
+ 
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -311,7 +311,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .project-card::after {
       content: '';
       position: absolute;
@@ -322,13 +322,13 @@
       transform-origin: left;
       transition: transform 0.4s;
     }
-
+ 
     .project-card:hover::after { transform: scaleX(1); }
     .project-card:hover {
       border-color: rgba(0,229,255,0.3);
       transform: translateY(-6px);
     }
-
+ 
     .project-num {
       font-family: 'Syne', sans-serif;
       font-size: 3rem;
@@ -337,7 +337,7 @@
       line-height: 1;
       margin-bottom: 20px;
     }
-
+ 
     .project-title {
       font-family: 'Syne', sans-serif;
       font-size: 1.2rem;
@@ -345,20 +345,20 @@
       margin-bottom: 16px;
       color: var(--text);
     }
-
+ 
     .project-desc {
       font-size: 0.8rem;
       color: var(--muted);
       line-height: 1.8;
       margin-bottom: 24px;
     }
-
+ 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
-
+ 
     .tag {
       font-size: 0.65rem;
       letter-spacing: 1px;
@@ -367,37 +367,37 @@
       border: 1px solid var(--border);
       color: var(--accent);
     }
-
+ 
     .tag.gold { color: var(--accent3); border-color: rgba(245,158,11,0.3); }
-
+ 
     .project-card--wide {
       grid-column: 1 / -1;
     }
-
+ 
     .phases {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin: 28px 0 0;
     }
-
+ 
     .phase {
       padding: 20px;
       border: 1px solid var(--border);
       position: relative;
     }
-
+ 
     .phase--done { border-color: rgba(0,229,255,0.3); background: rgba(0,229,255,0.04); }
     .phase--current { border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.05); }
     .phase--next { border-color: rgba(107,107,138,0.3); background: rgba(107,107,138,0.04); }
-
+ 
     .phase-header {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-bottom: 14px;
     }
-
+ 
     .phase-badge {
       font-size: 0.6rem;
       letter-spacing: 1.5px;
@@ -407,30 +407,30 @@
       width: fit-content;
       font-weight: 500;
     }
-
+ 
     .phase-badge--done { background: rgba(0,229,255,0.15); color: var(--accent); }
     .phase-badge--current { background: rgba(245,158,11,0.2); color: var(--accent3); animation: pulse 2s ease-in-out infinite; }
     .phase-badge--next { background: rgba(107,107,138,0.2); color: var(--muted); }
-
+ 
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.6; }
     }
-
+ 
     .phase-name {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
       font-size: 0.78rem;
       color: var(--text);
     }
-
+ 
     .phase-steps {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 7px;
     }
-
+ 
     .phase-steps li {
       font-size: 0.72rem;
       color: var(--muted);
@@ -438,16 +438,16 @@
       position: relative;
       line-height: 1.5;
     }
-
+ 
     .phase--done .phase-steps li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-size: 0.65rem; }
     .phase--current .phase-steps li::before { content: '▸'; position: absolute; left: 0; color: var(--accent3); }
     .phase--next .phase-steps li::before { content: '○'; position: absolute; left: 0; color: var(--muted); font-size: 0.5rem; top: 3px; }
-
+ 
     @media (max-width: 768px) {
       .phases { grid-template-columns: 1fr; }
       .project-card--wide { grid-column: auto; }
     }
-
+ 
     .accuracy-badge {
       display: inline-flex;
       align-items: center;
@@ -459,7 +459,7 @@
       font-size: 0.75rem;
       color: var(--accent);
     }
-
+ 
     /* ABOUT */
     .about-grid {
       display: grid;
@@ -467,20 +467,20 @@
       gap: 60px;
       align-items: center;
     }
-
+ 
     .about-text p {
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 2;
       margin-bottom: 20px;
     }
-
+ 
     .about-details {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
+ 
     .detail-row {
       display: flex;
       justify-content: space-between;
@@ -488,21 +488,21 @@
       padding: 16px 0;
       border-bottom: 1px solid var(--border);
     }
-
+ 
     .detail-key {
       font-size: 0.65rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--muted);
     }
-
+ 
     .detail-val {
       font-family: 'Syne', sans-serif;
       font-weight: 600;
       font-size: 0.9rem;
       color: var(--text);
     }
-
+ 
     /* CONTACT */
     .contact-wrapper {
       background: var(--card);
@@ -514,7 +514,7 @@
       gap: 40px;
       flex-wrap: wrap;
     }
-
+ 
     .contact-left h2 {
       font-family: 'Syne', sans-serif;
       font-size: 2.5rem;
@@ -522,12 +522,12 @@
       letter-spacing: -1px;
       margin-bottom: 12px;
     }
-
+ 
     .contact-left p {
       font-size: 0.8rem;
       color: var(--muted);
     }
-
+ 
     .contact-email {
       font-family: 'Syne', sans-serif;
       font-size: 1.1rem;
@@ -539,9 +539,9 @@
       gap: 12px;
       transition: opacity 0.3s;
     }
-
+ 
     .contact-email:hover { opacity: 0.7; }
-
+ 
     /* FOOTER */
     footer {
       padding: 40px 60px;
@@ -552,13 +552,13 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     footer p {
       font-size: 0.7rem;
       color: var(--muted);
       letter-spacing: 1px;
     }
-
+ 
     /* INTERNSHIP */
     .internship-card {
       background: var(--card);
@@ -572,12 +572,12 @@
       flex-wrap: wrap;
       transition: all 0.3s;
     }
-
+ 
     .internship-card:hover {
       border-color: rgba(0,229,255,0.4);
       transform: translateY(-4px);
     }
-
+ 
     .internship-company {
       font-family: 'Syne', sans-serif;
       font-size: 1.3rem;
@@ -585,7 +585,7 @@
       color: var(--accent);
       margin-bottom: 6px;
     }
-
+ 
     .internship-role {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
@@ -593,19 +593,19 @@
       color: var(--text);
       margin-bottom: 14px;
     }
-
+ 
     .internship-desc {
       font-size: 0.8rem;
       color: var(--muted);
       line-height: 1.8;
       max-width: 500px;
     }
-
+ 
     .internship-right {
       text-align: right;
       flex-shrink: 0;
     }
-
+ 
     .duration-label {
       font-size: 0.6rem;
       letter-spacing: 2px;
@@ -613,7 +613,7 @@
       color: var(--muted);
       margin-bottom: 6px;
     }
-
+ 
     .duration-val {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
@@ -621,7 +621,7 @@
       color: var(--text);
       margin-bottom: 16px;
     }
-
+ 
     .internship-badge {
       display: inline-block;
       background: rgba(0,229,255,0.1);
@@ -631,14 +631,14 @@
       letter-spacing: 1px;
       padding: 6px 14px;
     }
-
+ 
     /* CERTIFICATIONS */
     .certs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
-
+ 
     .cert-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -647,7 +647,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .cert-card::before {
       content: '🏆';
       position: absolute;
@@ -656,12 +656,12 @@
       font-size: 1.5rem;
       opacity: 0.15;
     }
-
+ 
     .cert-card:hover {
       border-color: rgba(0,229,255,0.3);
       transform: translateY(-4px);
     }
-
+ 
     .cert-issuer {
       font-size: 0.65rem;
       letter-spacing: 1.5px;
@@ -671,11 +671,11 @@
       padding: 4px 10px;
       display: inline-block;
     }
-
+ 
     .cert-issuer--cisco { background: rgba(0,114,197,0.15); color: #0072c5; }
     .cert-issuer--redhat { background: rgba(220,50,50,0.15); color: #e05252; }
     .cert-issuer--lets { background: rgba(245,158,11,0.15); color: var(--accent3); }
-
+ 
     .cert-title {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
@@ -684,19 +684,19 @@
       margin-bottom: 14px;
       line-height: 1.3;
     }
-
+ 
     .cert-date {
       font-size: 0.75rem;
       color: var(--accent);
       margin-bottom: 6px;
     }
-
+ 
     .cert-id {
       font-size: 0.65rem;
       color: var(--muted);
       word-break: break-all;
     }
-
+ 
     /* Divider */
     .divider {
       width: 100%;
@@ -705,7 +705,7 @@
       margin: 0 60px;
       width: calc(100% - 120px);
     }
-
+ 
     /* Responsive */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -720,7 +720,7 @@
   </style>
 </head>
 <body>
-
+ 
   <!-- NAV -->
   <nav>
     <div class="nav-logo">DP</div>
@@ -733,7 +733,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
+ 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
@@ -750,7 +750,7 @@
         <a href="#contact" class="btn-outline">Get In Touch</a>
       </div>
     </div>
-
+ 
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-num">3</div>
@@ -758,7 +758,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- SKILLS -->
   <section id="skills">
     <div class="section-label">// expertise</div>
@@ -790,22 +790,22 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-label">// work</div>
     <h2 class="section-title">Featured<br>Projects</h2>
     <div class="projects-grid">
-
+ 
       <div class="project-card project-card--wide">
         <div class="project-num">01</div>
         <div class="project-title">Bank Customer Churn Prediction and Analysis using Python, Power BI and Machine Learning</div>
         <p class="project-desc">
           End-to-end data project across 3 phases — from raw data to ML predictions — on a dataset of 10,000 bank customers.
         </p>
-
+ 
         <div class="phases">
-
+ 
           <div class="phase phase--done">
             <div class="phase-header">
               <span class="phase-badge phase-badge--done">✓ Completed</span>
@@ -818,7 +818,7 @@
               <li>Python Visualizations (Pandas, Matplotlib, Seaborn)</li>
             </ul>
           </div>
-
+ 
           <div class="phase phase--done">
             <div class="phase-header">
               <span class="phase-badge phase-badge--done">✓ Completed</span>
@@ -830,7 +830,7 @@
               <li>Age Analysis & Interactive Dashboard</li>
             </ul>
           </div>
-
+ 
           <div class="phase phase--done">
             <div class="phase-header">
               <span class="phase-badge phase-badge--done">✓ Completed</span>
@@ -842,9 +842,9 @@
               <li>Model Evaluation & Optimization</li>
             </ul>
           </div>
-
+ 
         </div>
-
+ 
         <div class="project-tags" style="margin-top:24px;">
           <span class="tag">Python</span>
           <span class="tag">Pandas</span>
@@ -857,16 +857,16 @@
           🎯 86.55% Prediction Accuracy (Random Forest)
         </div>
       </div>
-
+ 
       <div class="project-card project-card--wide">
         <div class="project-num">02</div>
         <div class="project-title">Global Hantavirus Surveillance Analytics and Fatality Prediction</div>
         <p class="project-desc">
           End-to-end data analytics and machine learning project analyzing global Hantavirus surveillance data across 2,000 records. Identifies outbreak trends, understands disease patterns, and predicts fatality outcomes using a multi-tool approach spanning Excel, SQL, Python, Power BI, and ML.
         </p>
-
+ 
         <div class="phases">
-
+ 
           <div class="phase phase--done">
             <div class="phase-header">
               <span class="phase-badge phase-badge--done">✓ Completed</span>
@@ -880,7 +880,7 @@
               <li>Average Recovery Days by Country</li>
             </ul>
           </div>
-
+ 
           <div class="phase phase--done">
             <div class="phase-header">
               <span class="phase-badge phase-badge--done">✓ Completed</span>
@@ -894,7 +894,7 @@
               <li>Correlation Heatmap Analysis</li>
             </ul>
           </div>
-
+ 
           <div class="phase phase--done">
             <div class="phase-header">
               <span class="phase-badge phase-badge--done">✓ Completed</span>
@@ -908,9 +908,9 @@
               <li>Fatality Prediction Model</li>
             </ul>
           </div>
-
+ 
         </div>
-
+ 
         <div class="project-tags" style="margin-top:24px;">
           <span class="tag">Excel</span>
           <span class="tag">SQL Server</span>
@@ -923,10 +923,10 @@
           🎯 92.25% Prediction Accuracy (Random Forest Classifier)
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- ABOUT -->
   <section id="about">
     <div class="section-label">// about me</div>
@@ -964,7 +964,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="section-label">// experience</div>
@@ -990,37 +990,37 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- CERTIFICATIONS -->
   <section id="certifications">
     <div class="section-label">// credentials</div>
     <h2 class="section-title">Certifications</h2>
     <div class="certs-grid">
-
+ 
       <div class="cert-card">
         <div class="cert-issuer cert-issuer--cisco">Cisco Networking Academy</div>
         <div class="cert-title">Data Analytics Essentials</div>
         <div class="cert-date">May 13, 2026</div>
         <div class="cert-id">ID: 9721844c-9a41-4799-82f1-2fb6b5a39d6e</div>
       </div>
-
+ 
       <div class="cert-card">
         <div class="cert-issuer cert-issuer--redhat">Red Hat Training & Certification</div>
         <div class="cert-title">Red Hat System Administration I (RH124)</div>
         <div class="cert-date">Nov 19, 2024</div>
         <div class="cert-id">Dr. M.G.R Educational and Research Institute</div>
       </div>
-
+ 
       <div class="cert-card">
         <div class="cert-issuer cert-issuer--lets">LetsUpgrade · NSDC</div>
         <div class="cert-title">HTML & CSS Bootcamp</div>
         <div class="cert-date">Mar 11, 2025</div>
         <div class="cert-id">Cert No: LUEHTMLMAR1251563</div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-label">// contact</div>
@@ -1035,12 +1035,12 @@
       </a>
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Dunna Prasant</p>
     <p>Built with GitHub Pages</p>
   </footer>
-
+ 
 </body>
 </html>
